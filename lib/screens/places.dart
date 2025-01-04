@@ -48,7 +48,7 @@ class _PlacesScreenState extends ConsumerState<PlacesScreen> {
           future: _placesFuture,
           builder: (context, snapshot) =>
               snapshot.connectionState == ConnectionState.waiting
-                  ? Center(child: CircularProgressIndicator())
+                  ? const Center(child: CircularProgressIndicator())
                   : PlacesList(
                       places: userPlaces,
                     ),
